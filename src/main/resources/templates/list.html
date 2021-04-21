@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf/org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table width="400px" text-align="center" style="margin:0 auto">
+        <tr>
+            <th>编号</th>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr th:each="user,iterStat : ${list}">
+            <!--iterStat是迭代器  index是其中迭代的属性(下标),从0开始   count(计数) 从1开始-->
+            <td th:text="${iterStat.index}"></td>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>

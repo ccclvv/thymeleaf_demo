@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf/org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    当前时间(默认): <span th:text="${date}" ></span> <br/>
+    当前时间(格式化): <span th:text="${#dates.format(date, 'yyyy-MM-dd HH:mm:ss')}" ></span> <br/>
+    <hr>
+
+    数值(默认): <span th:text="${num}" ></span> <br/>
+    <!-- (num, 8, 2) ==> (要格式化的时间, 保留整数位, 保留小数位) -->
+    数值(格式化): <span th:text="${#numbers.formatDecimal(num, 8, 2)}" ></span> <br/>
+    <hr>
+
+    大文本(默认): <span th:text="${str}" ></span> <br/>
+    判断文本是否为空: <span th:unless="${#strings.isEmpty(str)}" >字符串不为空</span> <br/>
+    截取显示(...也算字符): <span th:text="${#strings.abbreviate(str, 30)}" ></span> <br/>
+    截取显示: <span th:text="${#strings.substring(str,0, 30)}" ></span> <br/>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="thhp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--这里会直接去static或者public静态资源目录中找css/page.css-->
+    <link rel="stylesheet" th:href="@{/css/page.css}">
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>编号</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td><span th:text="${user.id}"></span></td>
+            <td><span th:text="${user.name}"></span></td>
+            <td><span th:text="${user.age}"></span></td>
+        </tr>
+        <tr>
+            <td><span th:text="${map.id}"></span></td>
+            <td><span th:text="${map.name}"></span></td>
+            <td><span th:text="${map.age1}"></span></td>
+            <td><span th:text="${map.address}"></span></td>
+        </tr>
+    </table>
+
+    <img th:src="${img}">
+
+    <!--这里会直接去static或者public静态资源目录中找img/1.png-->
+    <img th:src="@{/img/1.png}" >
+
+</body>
+</html>

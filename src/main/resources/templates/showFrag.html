@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="thhp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <h1>本页面内容</h1>
+
+    <!--插入   页面内容-->
+    <div style="color: blueviolet" th:insert="~{dir/footer :: footContent}"></div>
+
+    <!-- 替换 -->
+    <div style="color: blueviolet" th:replace="~{dir/footer :: footContent}"></div>
+
+    <!--包含-->
+    <div style="color: blueviolet" th:include="~{dir/footer :: footContent}"></div>
+</body>
+</html>
